@@ -1,0 +1,72 @@
+# Polymorphism & Composition Homework - Quiz
+
+# Polymorphism
+
+1. What does the ___word___ 'polymorphism' mean?
+
+It means to have many forms.
+
+2. What does it mean when we apply polymorphism to OO design? Give a
+simple Java example.
+
+public class ElectricCar extends Vehicle{
+
+    private ElectricEngine electricEngine;
+
+    public ElectricCar( int price, String colour) {
+        super(price, colour);
+        this.electricEngine = electricEngine;
+
+It allows us to give many forms to a simple object by using  That is, a class
+can have multiple forms depending on what you want it to do.
+
+3. What can we use to implement polymorphism in Java?
+It allows us to give many forms to a simple object by using extends  That is, a class
+can have multiple forms depending on what you want it to do.
+Pollymorphism can be implemented in both abstract classes and interfaces.
+
+4. How many 'forms' can an object take when using polymorphism?
+As many as needed.
+
+5. Give an example of when you could use polymorphism.
+When creating different types of car, it would help to reuse many of
+the same elements, for example Motorcycle, van and car, as all types
+of vehicle. Which is to say a car is a vehicle it has the qualities of
+vehicle passed down to it.
+
+
+
+# Composition
+
+6. What do we mean by 'composition' in reference to object-oriented programming?
+Composition means that the object in question is composed of certain
+elements form the object, giving it attributes.
+
+7. When would you use composition? Provide a simple example in Java.
+
+public class Printer extends PrintingDevice implements IOutput {
+    private int dpi;
+    private int printSpeed;
+
+    public Printer(String make, String model, int dpi, int printSpeed) {
+        super(make, model);
+        this.dpi = dpi;
+        this.printSpeed = printSpeed;
+    }
+
+    public int getDpi() {
+        return this.dpi;
+    }
+If I wanted to make a printer, it would make sense to create an things like print speed and
+dpi, (as I might want to use them for another printing device) In this case, rather
+than pass the attributes directly into the new printer I would compose the printer
+from the objects.
+
+8. What is/are the advantage(s) of using composition?
+
+It can be a simpler that using inheritance, as you can see what the
+object is composed of.
+
+9. When an object is destroyed, what happens to all the objects it is
+composed of?
+They are destroye
